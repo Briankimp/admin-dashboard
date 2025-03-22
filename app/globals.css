@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    /* MUTCU Logo Colors */
+    --primary: 215 100% 20%; /* Navy blue (bottom left) */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 176 80% 45%; /* Teal/turquoise (top right) */
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 35 100% 55%; /* Orange/amber (top left) */
+    --accent-foreground: 0 0% 10%;
+
+    --highlight: 350 100% 60%; /* Red (bottom right) */
+    --highlight-foreground: 0 0% 98%;
+
+    --muted: 210 20% 97%;
+    --muted-foreground: 215 20% 45%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 100% 20%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    /* MUTCU Logo Colors - Dark Mode */
+    --primary: 215 90% 30%; /* Navy blue - brighter for dark mode */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 176 80% 45%; /* Teal/turquoise */
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 35 100% 55%; /* Orange/amber */
+    --accent-foreground: 0 0% 10%;
+
+    --highlight: 350 100% 60%; /* Red */
+    --highlight-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 90% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom utility classes for MUTCU logo colors */
+@layer utilities {
+  .bg-mutcu-navy {
+    @apply bg-primary;
+  }
+  .bg-mutcu-teal {
+    @apply bg-secondary;
+  }
+  .bg-mutcu-orange {
+    @apply bg-accent;
+  }
+  .bg-mutcu-red {
+    @apply bg-highlight;
+  }
+
+  .text-mutcu-navy {
+    @apply text-primary;
+  }
+  .text-mutcu-teal {
+    @apply text-secondary;
+  }
+  .text-mutcu-orange {
+    @apply text-accent;
+  }
+  .text-mutcu-red {
+    @apply text-highlight;
+  }
+
+  .border-mutcu-navy {
+    @apply border-primary;
+  }
+  .border-mutcu-teal {
+    @apply border-secondary;
+  }
+  .border-mutcu-orange {
+    @apply border-accent;
+  }
+  .border-mutcu-red {
+    @apply border-highlight;
+  }
+}
+
